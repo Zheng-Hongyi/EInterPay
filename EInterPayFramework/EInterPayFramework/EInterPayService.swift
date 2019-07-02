@@ -26,7 +26,7 @@ open class EInterPayService: NSObject {
         SKPaymentQueue.default().remove(self)
     }
     
-    func pay(_ productId: String) {
+    open func pay(_ productId: String) {
         if !SKPaymentQueue.canMakePayments() {
             if self.userDisabledPayCall != nil {
                 self.userDisabledPayCall!()
