@@ -38,6 +38,10 @@ open class EInterPayService: NSObject {
             request.start()
         }
     }
+    
+    open func restorePay() {
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
 }
 
 extension EInterPayService: SKProductsRequestDelegate {
